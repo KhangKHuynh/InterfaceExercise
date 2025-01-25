@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace InterfaceExercise
 {
     class Program
@@ -43,7 +43,16 @@ namespace InterfaceExercise
             //Implement the stubbed out method in the derived classes.
             //In the scope of them method, use string interpolation to display property values.
             //In order to also interpolate values from ICompany, research how to extend interfaces.
-            
+            var car = new Car();
+            var truck = new Truck();
+            var vehicles = new List<IVehicle>() { car, truck };
+
+            foreach (var vehicle in vehicles)
+            {
+                vehicle.Drive();
+                vehicle.ChangeGears(true);
+                vehicle.Reverse();
+            }
         }
     }
 }
