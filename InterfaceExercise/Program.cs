@@ -45,7 +45,8 @@ namespace InterfaceExercise
             //In order to also interpolate values from ICompany, research how to extend interfaces.
             var car = new Car();
             var truck = new Truck();
-            var vehicles = new List<IVehicle>() { car, truck };
+            var suv = new Suv();
+            var vehicles = new List<IVehicle>() { car, truck, suv };
 
             foreach (var vehicle in vehicles)
             {
